@@ -8,5 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
   
   taskForm.addEventListener("submit", (e) => {
     e.preventDefault();
+    console.log(e.target[0].value)
+    const li = document.createElement("li")
+    li.innerText = e.target[0].value
+    taskUl.append(li)
+    console.log(li)
+  
   });
 });
